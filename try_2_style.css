@@ -1,0 +1,89 @@
+/*    사용자 지정   */
+:root {
+  --accent-color: #ffcccb;
+  --text-color: white;
+  --background-color: #ef9a9a;
+}
+
+body {
+  margin: 0; /*    빈틈없이 꽉 차게 함   */
+  font-family: "Maven Pro", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navbar {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px;
+}
+
+.navbar__logo {
+  color: var(--text-color);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar__logo i {
+  color: black;
+}
+
+.navbar__menu {
+  color: var(--text-color);
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+
+.navbar__menu li {
+  padding: 8px 20px;
+}
+
+.navbar__menu li:hover {
+  background-color: var(--accent-color);
+  border-radius: 3px;
+}
+
+.navbar__icons {
+  color: black;
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+
+.navbar__icons li {
+  padding: 8px 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar__logo {
+    align-self: flex-start;
+  }
+
+  .navbar__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .navbar__menu li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar__icons {
+    margin: 0;
+  }
+}
